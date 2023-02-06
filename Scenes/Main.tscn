@@ -1,0 +1,209 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Sprites/Paddle.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Ball.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Ball.gd" type="Script" id=4]
+[ext_resource path="res://Entities/Wall.tscn" type="PackedScene" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 40.75, 8 )
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 5.0
+
+[node name="Root_Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+
+[node name="Player_KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( 0, 196 )
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Player_KinematicBody2D"]
+position = Vector2( 523, 354 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player_KinematicBody2D"]
+position = Vector2( 525, 354 )
+shape = SubResource( 1 )
+
+[node name="Ball_KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( 529, 212 )
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="Ball_KinematicBody2D"]
+scale = Vector2( 0.01, 0.01 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball_KinematicBody2D"]
+shape = SubResource( 2 )
+
+[node name="PlatformGroup_Node2D" type="Node2D" parent="."]
+
+[node name="Wall_1" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+
+[node name="Wall_2" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 425, 14 )
+
+[node name="Wall_3" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 610, 15 )
+
+[node name="Wall_4" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 706, 14 )
+
+[node name="Wall_5" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 331, 15 )
+
+[node name="Wall_6" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 239, 13 )
+
+[node name="Wall_7" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 797, 15 )
+
+[node name="Wall_8" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 145, 13 )
+
+[node name="Wall_9" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 887, 15 )
+
+[node name="Wall_10" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 51, 15 )
+
+[node name="Wall_11" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 975, 15 )
+
+[node name="Wall_12" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 520, 49 )
+
+[node name="Wall_13" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 428, 48 )
+
+[node name="Wall_14" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 613, 49 )
+
+[node name="Wall_15" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 709, 48 )
+
+[node name="Wall_16" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 334, 49 )
+
+[node name="Wall_17" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 242, 47 )
+
+[node name="Wall_18" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 800, 49 )
+
+[node name="Wall_19" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 148, 47 )
+
+[node name="Wall_20" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 890, 49 )
+
+[node name="Wall_21" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 54, 49 )
+
+[node name="Wall_22" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 978, 49 )
+
+[node name="Wall_23" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 519, 79 )
+
+[node name="Wall_24" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 427, 78 )
+
+[node name="Wall_25" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 612, 79 )
+
+[node name="Wall_26" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 708, 78 )
+
+[node name="Wall_27" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 333, 79 )
+
+[node name="Wall_28" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 241, 77 )
+
+[node name="Wall_29" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 799, 79 )
+
+[node name="Wall_30" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 147, 77 )
+
+[node name="Wall_31" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 889, 79 )
+
+[node name="Wall_32" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 53, 79 )
+
+[node name="Wall_33" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 977, 79 )
+
+[node name="Wall_34" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 523, 104 )
+
+[node name="Wall_35" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 431, 103 )
+
+[node name="Wall_36" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 616, 104 )
+
+[node name="Wall_37" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 712, 103 )
+
+[node name="Wall_38" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 337, 104 )
+
+[node name="Wall_39" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 245, 102 )
+
+[node name="Wall_40" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 803, 104 )
+
+[node name="Wall_41" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 151, 102 )
+
+[node name="Wall_42" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 893, 104 )
+
+[node name="Wall_43" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 57, 104 )
+
+[node name="Wall_44" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 981, 104 )
+
+[node name="Wall_45" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 523, 132 )
+
+[node name="Wall_46" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 431, 131 )
+
+[node name="Wall_47" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 616, 132 )
+
+[node name="Wall_48" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 712, 131 )
+
+[node name="Wall_49" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 337, 132 )
+
+[node name="Wall_50" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 245, 130 )
+
+[node name="Wall_51" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 803, 132 )
+
+[node name="Wall_52" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 151, 130 )
+
+[node name="Wall_53" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 893, 132 )
+
+[node name="Wall_54" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 57, 132 )
+
+[node name="Wall_55" parent="PlatformGroup_Node2D" instance=ExtResource( 5 )]
+position = Vector2( 981, 132 )
